@@ -1,0 +1,913 @@
+@import 
+ './variables.scss',
+ './reset.scss';
+
+.main-body > div{
+    padding: 0 12% 50px 12%;
+}
+
+.home{
+    height: 100vh;
+    background: $bg1;
+    @include flex(column, center, '');
+    padding-top: 50px;
+
+    & .home-title{
+        flex: 1;
+        @include flex(column, center, '');
+        margin-top: 50px;
+        .home-img {
+            @include flex(row, '', center);
+            h4{
+                @include font(40px, 800);
+                margin-left: 20px;
+            }         
+            img {
+                width: 65px;
+                height: 65px;   
+            }
+        }
+        .home-title-txt{
+            p{
+                @include font(35px, 400);
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.home-anim-box{
+    width: 100%;
+    flex: 3;
+    @include flex(row, '', '');
+
+    .home-big-box{
+        opacity: 0;
+        flex: 2;
+        height: calc(100vh/1.5);
+        @include shadowBox;
+    
+        .inner-big-box{
+            @include flex(column, center, flex-start);
+            padding: 30px;
+            .home-intro{
+                @include flex(row, center, center);
+                span{
+                    @include font(28px, 500);
+                    @include ballon;
+                    margin-left: 20px;
+                }
+                span::after{
+                    @include ballonAfter
+                }
+                .intro-img > img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .home-intro-txt{
+                @include font(30px, 400);            
+                padding: 40px 30px 0 0;
+                line-height: 1.5;                
+                word-spacing: 1px;
+                letter-spacing: 1px;
+                word-break: keep-all;
+            }
+            .home-prof-boxs{
+                width: 100%;
+                @include flex(column, center, '');
+                margin-top: 40px;
+
+                .prof-box{
+                    flex: 1;
+                    @include flex(row, '', center);
+                    margin-top: 30px;
+                    padding: 20px;
+                    border: 1px solid #eee;
+                    border-radius: 10px;
+
+                    .prof-img{
+                        & > img{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+
+                    .prof-box-cont{
+                        margin-left: 20px;
+                        @include flex(column, center, flex-start);
+                        & > h4{
+                            @include font(25px, 0);
+                            color: rgb(96, 111, 123);
+                        }
+
+                        & > span{
+                            @include font(25px, 500);
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                .prof-box:not(:first-child){
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+   .home-anim-boxs {
+        flex: 1;
+        @include flex(column, '', center);
+        & > div {
+            opacity: 0;
+            width: 65%;
+            height: calc(100vh/4);
+            @include shadowBox;
+            @include flex(column, center, center);
+            
+            a{
+                color: $light-blue2;
+                flex: 2;
+                @include flex('',center,center)
+            }
+            a:visited{
+                color: $light-blue2;
+            }
+
+            a:hover{
+                color: $light-blue2
+            }
+            .github-img  {
+                @include flex(column, center, center);
+                img{
+                    width: 80%;
+                    height: 40px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+                span{
+                    margin-top: 10px;
+                }
+            }
+
+            .small-box-txt{
+                flex: 1;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .velog-img {
+                @include flex(column, center, center);
+                img{
+                    width: 80%;
+                    height: 50px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+                span{
+                    margin-top: 7px;
+                }
+            }
+        }
+
+        & > div:not(:first-child){
+            margin-top: 30px;
+        }
+    }
+}
+
+.skils{
+    height: 1050px;
+    background: $bg1;
+    border-top: 15px solid var(--grey100);
+    @include flex(column, '', center);
+
+    & > .skils-title{
+        width: 100%;
+        height: 50px;
+        padding: 60px 0;
+        @include flex(row, center, center);
+        & > h4{
+            margin-left: 10px;
+            @include font(40px, 800);
+        }
+    }
+
+    .skils-img > img{
+        width: 55px;
+        height: 50px;
+    }
+
+    & > .skils-cont{
+        width: 100%;
+        flex: 1;
+        @include flex(row, center, center);
+        & > div {
+            width: 400px;
+            padding: 0 40px;
+            height: 100%;
+        }
+        .skils-box{
+            .skils-txt-box{
+                padding: 20px;
+                border-bottom: 2px solid #eee;
+                span{
+                    @include font(25px, 700);
+                    color: $red;
+                }
+            }
+            .skils-back-img{
+                padding: 20px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.career{
+    height: 1950px;
+    background: $bg1;
+    border-top: 15px solid var(--grey100);
+    @include flex(column, '', center);
+    padding-bottom: 0 !important;
+    & > .career-title{
+        width: 100%;
+        height: 50px;
+        padding: 60px 0;
+        @include flex(row, center, center);
+
+        .carrer-logo{
+            img{
+                width: 65px;
+                height: 60px;
+            }
+        }
+        & > h4{
+            margin-left: 15px;
+            @include font(40px, 800);
+        }
+    }
+
+    & > .career-swiper{
+        width: 100%;
+        @include flex(row, center, center);
+        @include shadowBox;
+        border-radius: 0;
+    }
+
+    & .career-box{
+        width: 100%;
+        height: 100%;
+        @include flex(column, '', '');
+        border-radius: 0;
+        letter-spacing: 1px;
+        .career-intro {
+            @include flex(column, '', flex-start);
+            padding: 20px 30px;
+            .intro-logo{
+                @include flex(row, center, center);
+                .logo-img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 2px solid #eee;
+                    padding: 20px;
+                    img{
+                        width: inherit;
+                    }
+                }
+                .logo-txt{
+                    margin-left: 20px;
+                    & > h4{
+                        font-size: 27px;
+                        margin-bottom: 10px;
+                    }
+                    & > span{
+                        font-size: 22px;
+                        color: #6c757d;
+                    }
+                }
+            }
+            .intro-txt{
+                padding: 30px 20px 0;
+                span{
+                    @include font(20px, 500);
+                    line-height: 1.5;
+                    letter-spacing: 1px;
+                    word-break: keep-all; 
+                }
+            }
+            border-bottom: 2px solid #eee;
+        }
+
+        .career-main{
+            padding: 30px 30px;
+            & > h4{
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+            .main-txt{
+                padding-right: 20px;
+                span{
+                    @include font(20px, 500);
+                    line-height: 1.2;
+                    letter-spacing: 1px;
+                    word-break: keep-all;    
+                }
+            }
+            .career-project{
+                margin-top: 25px;
+                padding: 25px 20px;
+                border: 2px solid #eee;
+                border-radius: 15px;
+                & > h4{
+                    font-size: 22px;
+                    margin-bottom: 5px;
+                }
+                & > span{
+                    @include font(18px, 500);
+                    color: #6c757d;
+                }
+                ul{
+                    margin-top: 15px;
+                }
+                li{
+                    @include font(18px, 500);
+                    margin-top: 8px;
+                }
+                li:before {
+                    content: '-';
+                    display: inline-block;
+                    width: 10px;
+                }
+                .career-etc{
+                    @include flex(column, flex-start, flex-start);
+                    margin-top: 30px;
+                    h4{
+                        font-size: 18px;
+                    }
+                    .career-skil{
+                        @include flex(row, flex-start, center);
+                        span{
+                            padding: 6px 9px;
+                            background-color: #f3f3f3;
+                            color: #6c757d;
+                            border-radius: 10px;
+                            margin-left: 10px;
+                        }
+                    }
+                    .career-link{
+                        margin-top: 20px;
+                        @include flex(row, flex-start, center);
+                        h4{
+                            margin-right: 10px;
+                        }
+                        a{
+                            color: $light-blue2;
+                        }
+                        a:visited{
+                            color: $light-blue2;
+                        }
+            
+                        a:hover{
+                            color: $light-blue2
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
+
+/*  swiper */
+.swiper {
+    padding-bottom: 50px !important;
+}
+
+// .swiper-cube-shadow{
+//     opacity: 0.3 !important;
+// }
+
+.swiper-horizontal>.swiper-pagination-bullets{
+    bottom: 20px !important;
+}
+.swiper-pagination{
+    height: 30px;
+}
+
+.swiper-pagination-bullet{
+    width: 40px !important;
+    height: 7px !important;
+    border-radius: 0 !important;
+}
+
+.swiper-pagination-bullet-active{
+    background: $blue !important;
+}
+.swiper-slide{
+    height: auto;
+}
+
+/*  swiper end */
+
+
+.scroll-box{
+    @include shadowBox;
+}
+
+.about{
+    height: 1000px;
+    background: $bg2;
+}
+
+
+
+.header{
+    position: fixed;
+    @include position(0,0,'',0);
+    width: 100%;
+    z-index: 2000;
+    border: 0;
+    background: $bg1;
+
+    .header-wrap{
+        width: 70vw;
+        height: 55px;
+        margin: 0 auto;
+        @include flex(row, space-between,center);
+    
+        .header-menu{
+            @include flex(row, space-between, center);
+            @include font(21px, 600);
+            width: 300px;
+        
+            & li {
+                cursor: pointer;
+                padding: 8px 10px;
+                border-radius: 10px;
+            }
+        
+            & li:hover{
+                background-color: var(--greyOpacity100);
+            }
+        }
+        
+        .logo{
+            @include font(30px, 800);
+            width: 170px;
+            cursor: pointer;
+            .logo-img{
+                img{
+                    width: 100%
+                }
+            }
+        }
+    }
+}
+
+
+
+.footer{
+    @include flex(column, center, center);
+    padding: 60px 0;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+
+    .github-logo{
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    
+
+    span{
+        margin-top: 20px;
+        color: #1d1d1f;
+        @include font(14px, 400)
+    }
+}
+
+
+
+/* 공용 */
+.table-row {
+    @include flex(row, center, center);
+    flex: 1;
+}
+
+/* 테블릿 */
+
+@include tablet{
+    .main-body > div{
+        padding: 0 8% 50px 8%;
+    }
+
+    /* 테블릿 홈 영역 */
+    .home .home-title .home-img img{
+        width: 50px;
+        height: 50px;
+    }
+    .home .home-title .home-img h4{
+        font-size: 35px;
+    }
+    .home .home-title .home-title-txt p{
+        font-size: 31px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro .intro-img > img{
+        width: 45px;
+        height: 45px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro span{
+        font-size: 24px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro-txt{
+        font-size: 26px;
+        padding: 40px 20px 0 0;
+    }
+
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs{
+        margin-top: 40px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box .prof-box-cont > h4{
+        font-size: 22px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box .prof-box-cont > span{
+        font-size: 22px;
+    }
+
+    /* 테블릿 기술 영역 */
+    .skils > .skils-cont > div{
+        padding: 0 30px;
+    }
+    .skils{
+        height: 900px;
+    }
+
+    /* 테블릿 경력 영역 */
+    .career{
+        height: 1850px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-img{
+        width: 45px;
+        height: 45px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-txt > h4{
+        font-size: 27px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-txt > span{
+        font-size: 22px;
+    }
+    .career .career-box .career-intro .intro-txt{
+        padding: 20px 10px 0;
+    }
+    
+    .career .career-box .career-main > h4{
+        font-size: 23px;
+    }
+    .career .career-box .career-main .career-project > h4{
+        font-size: 19px;
+    }
+    .career .career-box .career-main .career-project > span{
+        font-size: 16px;
+    }
+    .career .career-box .career-main .career-project li{
+        font-size: 16px;
+    }
+    .career .career-box .career-main .career-project .career-etc h4{
+        font-size: 16px;
+    }
+    .career .career-box .career-main .career-project .career-etc .career-skil span{
+        font-size: 15px;
+        padding: 5px 8px;
+    }
+}
+
+@include mobile {
+    .main-body > div{
+        padding: 0 3% 50px 3%;
+    }
+    .header .header-wrap .header-menu{
+        width: 250px;
+        margin-right: 20px;
+    }
+    .header .header-wrap{
+        width: 90vw;
+    }
+    /* 모바일 홈 영역 */
+    .home{
+        height: fit-content;
+    }
+    .home .home-title{
+        margin-top: 85px
+    }
+    .home-anim-box{
+        @include flex(column, '', '');
+        margin-top: 35px
+    }
+    .home-anim-box .home-anim-boxs{
+        @include flex(row, '', '');
+    }
+    .home .home-title .home-img h4{
+        font-size: 31px;
+    }
+    .home .home-title .home-title-txt p{
+        font-size: 27px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro-txt{
+        padding: 20px 10px 0 0;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs{
+        margin-top: 0;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro .intro-img > img{
+        width: 40px;
+        height: 40px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro span{
+        font-size: 22px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box{
+        padding: 20px 30px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box .prof-img > img{
+        width: 45px;
+        height: 45px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box .prof-box-cont > h4{
+        font-size: 20px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box .prof-box-cont > span{
+        font-size: 20px;
+    }
+    .home-anim-box .home-anim-boxs{
+        margin-top: 30px;
+    }
+    .home-anim-box .home-anim-boxs > div{
+        width: fit-content;
+        flex: 1;
+        padding: 30px  20px;
+        height: 15vh;
+    }
+    .home-anim-box .home-anim-boxs > div:not(:first-child){
+        margin-top: 0;
+        margin-left: 20px;
+    }
+    .home-anim-box .home-anim-boxs > div .small-box-txt{
+        margin-top: 20px;
+    }
+    /* 모바일 기술 영역 */
+    .skils{
+        height: fit-content;
+    }
+    .skils > .skils-title{
+        padding: 40px 0 30px;
+    }
+    .skils .skils-img > img{
+        width: 50px;
+        height: 45px;
+    }
+    
+    .skils > .skils-title > h4{
+        font-size: 35px;
+    }
+    .skils > .skils-cont{
+        @include flex(column, center, center);
+    }
+    .skils > .skils-cont > div{
+        margin-top: 40px;
+    }
+    /* 모바일 경력 영역 */
+    .career > .career-title .carrer-logo img{
+        width: 60px;
+        height: 55px;
+    }
+    .career > .career-title{
+        padding: 50px 0;
+    }
+    .career > .career-title > h4{
+        font-size: 35px;
+    }
+    .career{
+        height: 2250px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-img{
+        width: 40px;
+        height: 40px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-txt > h4{
+        font-size: 25px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-txt > span{
+        font-size: 20px;
+    }
+    .career .career-box .career-main > h4{
+        font-size: 22px;
+    }
+    .career .career-box .career-main .career-project .career-etc .career-skil{
+        @include flex(column, flex-start, flex-start);
+    }
+    .career .career-box .career-main .career-project .career-etc .career-skil span{
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    .career .career-box .career-main .career-project .career-etc{
+        margin-top: 20px;
+    }
+    .career-skils-list{
+        margin-top: 15px;
+    }
+    .career .career-box .career-main .career-project li{
+        font-size: 15px;
+        word-break: keep-all;
+        line-height: 1.3;
+    }
+    .career .career-box .career-main .career-project .career-etc .career-link{
+        @include flex(column, flex-start, flex-start);
+    }
+    .career .career-box .career-main .career-project .career-etc .career-link a{
+        margin-top: 10px;
+    }
+}
+
+@include mobile2{
+    .header .header-wrap .logo{
+        width: 130px;
+    }
+    .header .header-wrap .header-menu{
+        font-size: 16px;
+        width: 150px;
+    }
+    /* 홈 */
+    .home .home-title .home-img img{
+        width: 45px;
+        height: 45px;
+    }
+    .home .home-title .home-img h4{
+        font-size: 26px;
+    }
+    .home .home-title .home-title-txt p{
+        font-size: 23px;
+    }
+    .home-anim-box .home-anim-boxs > div .github-img img{
+        width: 60%;
+    }
+    .home-anim-box .home-anim-boxs > div .velog-img img{
+        width: 60%;
+    }
+    .home-anim-box .home-anim-boxs > div .small-box-txt{
+        margin-top: 35px;
+    }
+    .home-anim-box{
+        margin-top: 30px;
+    }
+    .home-anim-box .home-big-box .inner-big-box{
+        padding: 30px 10px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro .intro-img > img{
+        width: 35px;
+        height: 35px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro span{
+        font-size: 18px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-intro-txt{
+        font-size: 20px;
+    }
+    .table-row{
+        @include flex(column, center, center)
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box{
+        width: 80%;
+    }
+    .prof-img{
+        width: 60px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box .prof-img > img{
+        width: 40px;
+        height: 40px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box .prof-box-cont > h4{
+        font-size: 18px;
+    }
+    .home-anim-box .home-big-box .inner-big-box .home-prof-boxs .prof-box .prof-box-cont > span{
+        font-size: 18px;
+    }
+    .home-anim-box .home-anim-boxs{
+        flex-direction: column;
+    }
+    .home-anim-box .home-anim-boxs > div{
+        width: 90%;
+    }
+    .home-anim-box .home-anim-boxs > div:not(:first-child){
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    /* 기술 */
+    .skils > .skils-cont > div{
+        width: fit-content;
+    }
+    .skils > .skils-cont > div{
+        margin-top: 30px;
+    }
+    .skils > .skils-cont > div{
+        padding: 0 10px;
+    }
+    .skils .skils-img > img{
+        width: 45px;
+        height: 40px;
+    }
+    .skils > .skils-title > h4{
+        font-size: 30px;
+    }
+    .skils > .skils-cont .skils-box .skils-txt-box span{
+        font-size: 22px;
+    }
+
+    .skils>.skils-cont .skils-box .skils-back-img{
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .skils>.skils-cont .skils-box .skils-back-img{
+        img{
+            width: 70%;
+        }
+    }
+   
+    /* 경력 */
+    .career{
+        height: 2550px;
+    }
+    .career .career-box .career-intro{
+        padding: 20px 10px;
+    }
+    .career .career-box .career-main{
+        padding: 20px 10px;
+    }
+    .career > .career-title{
+        padding: 40px 0;
+    }
+    .career > .career-title .carrer-logo img{
+        width: 55px;
+        height: 50px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-txt{
+        margin-left: 10px;
+    }
+    .career > .career-title > h4{
+        font-size: 30px;
+        margin-left: 10px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-img{
+        width: 30px;
+        height: 30px;
+        padding: 15px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-txt > h4{
+        font-size: 20px;
+    }
+    .career .career-box .career-intro .intro-logo .logo-txt > span{
+        font-size: 16px;
+    }
+    .career .career-box .career-main .career-project .career-etc .career-link{
+        width: 100%;
+    }
+    .career .career-box .career-main .career-project .career-etc .career-link a{
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .career .career-box .career-intro .intro-txt span{
+        font-size: 17px;
+    }
+    .career .career-box .career-main .main-txt span{
+        font-size: 17px;
+    }
+    .career .career-box .career-main .career-project{
+        padding: 20px 10px;
+    }
+    .career .career-box .career-main .career-project > h4{
+        font-size: 17px;
+    }
+    .career .career-box .career-main .career-project > span{
+        font-size: 15px;
+    }
+    .career .career-box .career-main .career-project li{
+        font-size: 15px;
+    }
+    .career .career-box .career-main .career-project .career-etc h4{
+        font-size: 15px;
+    }
+    .career .career-box .career-main .career-project .career-etc .career-skil span{
+        font-size: 13px;
+        line-height: 2.5;
+    }
+    .career .career-box .career-intro .intro-txt{
+        padding: 20px 0;
+    }
+}
