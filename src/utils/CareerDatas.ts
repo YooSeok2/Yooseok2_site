@@ -25,7 +25,7 @@ export const KaleCodeData : KaleCodeType = {
   bigStock: {
     id: 'bigStock',
     title: '큰손정석 프로젝트 개발',
-    year: '2022.04 ~ 2022.08',
+    year: '2022.05 ~ 2022.11',
     cont: [
       '서비스 기획부터 참여하여 타겟, BM, 서비스 방향을 논의하고 주도적으로 개발하였다.',
       'SEO최적화를 위해 리액트기반의 프레임워크인 Next를 이용하여 SSR방식의 웹페이지를 구축하였다.',
@@ -101,7 +101,7 @@ export const sevenFintechData : SevenFintechType = {
   dobego: {
     id: 'dobego',
     title: '도배고 서비스 설계 및 개발 후 배포',
-    year: '2021.02 ~ 2021.05',
+    year: '2021.01 ~ 2021.05',
     cont: [
       '비즈니스의 아이디어를 전달받고 프로젝트 설계 및 기획 하였다.',
       '리엑트 네이티브로 화면을 만들고 노드로 서버를 구축하였다.',
@@ -125,7 +125,7 @@ export const sevenFintechData : SevenFintechType = {
   pam: {
     id: 'pam',
     title: '팜 CMS 제작, 팜 앱 웹뷰 기획 및 개발',
-    year: '2020.12 ~ 2021.01',
+    year: '2020.11 ~ 2020.12',
     cont: [
       '고객 정보와 계약 정보를 관리하는 페이지를 Sencha프레임워크를 이용하여 제작하였다.',
       '팜 앱 서비스에 웹 뷰로 들어갈 화면을 jQuery로 만들었다.',
